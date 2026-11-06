@@ -1,0 +1,18 @@
+/* Override the archived site's reveal state before the first paint. */
+html body .tantour-reveal{opacity:1;transform:none;animation:none!important}
+html body .motion-pending{opacity:0!important}
+@keyframes lafReveal{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:translateY(0)}}
+.video-lettering{isolation:isolate}.video-lettering-overlay{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+#conceito [style*="mix-blend-mode"]{transition:opacity .35s ease}
+#diferenciais button[aria-expanded=true] svg{transform:rotate(45deg);stroke:#d4611a}
+#diferenciais button[aria-expanded=false] svg{transform:rotate(0deg)}
+#diferenciais button svg{transition:transform .35s ease,stroke .35s ease}
+@media(prefers-reduced-motion:no-preference){
+ .mobile-menu:not([hidden]){animation:lafMenu .25s cubic-bezier(.22,1,.36,1) both}
+ .mobile-menu:not([hidden]) a{animation:lafReveal .35s cubic-bezier(.22,1,.36,1) both}
+ .mobile-menu a:nth-child(2){animation-delay:35ms}.mobile-menu a:nth-child(3){animation-delay:70ms}.mobile-menu a:nth-child(4){animation-delay:105ms}.mobile-menu a:nth-child(5){animation-delay:140ms}
+ @keyframes lafMenu{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:translateY(0)}}
+ footer a{transition:transform .25s cubic-bezier(.22,1,.36,1),background .25s}
+ footer a:hover{transform:translateY(-5px) scale(1.12)}
+}
+@media(prefers-reduced-motion:reduce){html body .motion-pending{opacity:1!important}.video-lettering video{opacity:.65}}

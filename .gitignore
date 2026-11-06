@@ -1,3 +1,11 @@
 reference/
+reference-about/
+reference-concept/
+reference-scooters/
+reference-bikes/
+reference-contact/
+.tools/
+motion-review/
+preview*.log
 *.zip
 node_modules/
